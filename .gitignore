@@ -1,0 +1,61 @@
+# Laravel
+/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Ignore everything in bootstrap/cache except important files
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Environment files
+.env
+.phpunit.result.cache
+.editorconfig
+# Composer dependencies
+/vendor
+
+# Node dependencies
+/node_modules
+
+# Vite
+/public/build
+/public/mix-manifest.json
+
+# Testing
+coverage/
+
+# IDEs
+/.idea
+/.vscode
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker overrides (optional)
+docker-compose.override.yml
+docker/mysql-data
+docker/nginx/logs
+# Logs
+*.log
+
+
+
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
