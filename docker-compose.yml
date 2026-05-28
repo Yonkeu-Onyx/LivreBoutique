@@ -1,0 +1,26 @@
+services:
+    app:
+        build: .
+        container_name: livreBoutique_laravelApp
+        restart: unless-stopped
+        working-dir: var/www
+        volumes:
+            - .:/var/www
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        restart: unless-stopped
+        ports:
+            - "80:80"
+        volumes:
+            - .:/var/www
+            - .:/nginx:/etc/nginx/conf.d
+    mysql:
+        image: mysql:8
+        container_name: mysql
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: laravel
+            MYSQL_ROOT_PASSWORD: rootpassword
+        ports:
+            - "3306:3306"
